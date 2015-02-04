@@ -20,7 +20,9 @@ You need to wait for the application to finish starting (when you see that its r
 $ docker logs -f ks-with-rice-bundled
 ```
 
-Once its running you will want to know its IP address.  This can be determined by running the **docker inspect** command.
+# Accessing KS Web Interface 
+
+Once ks-with-rice-bundled has finished starting up you will want to know its IP address.  This can be determined by running the **docker inspect** command.
 
 ```
 $ docker inspect ks-with-rice-bundled | grep IP
@@ -28,9 +30,11 @@ $ docker inspect ks-with-rice-bundled | grep IP
         "IPPrefixLen": 16,
 ```
 
-If you are running directly on a Linux box you can just connect to http://172,17,0,27:8080 directly.
+If you are running directly on a Linux box you can just connect to http://172.17.0.27:8080 directly.
 
 If you are running Linux inside of a virtual machine you will need to add a static route to the 172.17.0.0/16 network through the network interface connecting your computer to the virtual machine.
+
+## Add Static Virtual Machine Route on Windows
 
 For example in Windows 7 that would be:
 
