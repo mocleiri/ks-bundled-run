@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # this assumes a fresh start each time.
 # If we were to locally tag the oracle container to form a new impexed image then it could be used instead as a starting point without requiring the impex process to run (it would save time).
